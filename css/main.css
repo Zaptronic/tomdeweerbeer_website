@@ -140,6 +140,8 @@
   display: none;
   overflow: hidden;
   position: absolute;
+  top: 0;
+  left: 0;
   color: aqua;
   width: 100%;
   height: 100%;
@@ -182,6 +184,13 @@
 .searchpage__background__show {
   z-index: -1; }
 
+.bookseller {
+  position: relative;
+  margin-top: calc(100vh - 10px);
+  width: 100%;
+  min-height: 100vh;
+  background-color: red; }
+
 /*********************************************
  * Tom de weerbeer scss
  *********************************************/
@@ -190,7 +199,7 @@
   src: url("../fonts/Cof.ttf") format("opentype"); }
 
 body {
-  background: #eaa700;
+  background: #2b393e;
   margin: 0;
   font-family: monospace;
   font-size: 18px; }
@@ -199,25 +208,26 @@ p {
   margin: 6px 24px; }
 
 .weervoorspeller {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%);
+  position: fixed;
+  top: 0;
+  left: 0;
   display: block;
   width: 100%;
   max-width: 700px;
   height: 100%;
-  max-height: 1000px;
-  -webkit-box-shadow: 1px 10px 10px #b78300;
-          box-shadow: 1px 10px 10px #b78300; }
+  max-height: 1000px; }
+  @media (min-width: 700px) {
+    .weervoorspeller {
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translateY(-50%) translateX(-50%);
+              transform: translateY(-50%) translateX(-50%); } }
 
 #tomweer {
   top: 0;
-  position: fixed;
-  overflow: hidden; }
+  position: absolute;
+  overflow: hidden;
+  border-radius: 8px; }
 
 .errorpage {
   position: absolute;

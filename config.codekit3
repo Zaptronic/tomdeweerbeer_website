@@ -68,6 +68,16 @@
 		"oAP": "\/config.xml",
 		"oF": 0
 		},
+	"\/css\/bookseller.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/bookseller-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/css\/main.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1113,6 +1123,16 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/min\/timer-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/min\/min\/timer-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/min\/weathertype kopie-min.js": {
 		"ft": 64,
 		"ma": 0,
@@ -1227,6 +1247,19 @@
 		"oA": 0,
 		"oAP": "\/scss\/.sass-cache\/9e1008dca070624dbe1768a8c6b626afff3b4776\/weatherdescription.scssc",
 		"oF": 0
+		},
+	"\/scss\/bookseller.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/bookseller.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		},
 	"\/scss\/main.scss": {
 		"aP": 1,

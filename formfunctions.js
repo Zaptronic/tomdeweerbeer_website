@@ -58,6 +58,7 @@ function addsearchpage() {
         searchpage.addClass('searchpage__show');
         searchpageBackground.addClass('searchpage__background__show');
         searchpagecounter++;
+        window.scrollTo(0,0);
     }
     if(clearbuttoncounter < 1) {
         clearbutton.addClass('clearbutton__hide');

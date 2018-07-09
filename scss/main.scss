@@ -1,7 +1,7 @@
 @import "weatherdescription";
 @import "searchform";
 @import "searchpage";
-
+@import "bookseller";
 
 $background-color: rgb(26,35,38);
 $tom-yellow: rgb(234,167,0);
@@ -15,7 +15,7 @@ $tom-yellow: rgb(234,167,0);
     }
 
 body {
-	background: $tom-yellow;
+	background: lighten($background-color, 8%);
 	margin: 0;
 	font-family: monospace;
 	font-size: 18px;
@@ -24,23 +24,27 @@ p {
 	margin: 6px 24px;
 }
 .weervoorspeller {
-    box-sizing: border-box;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
+    position: fixed;
+    top: 0;
+    left: 0;
     display: block;
     width: 100%;
     max-width: 700px;
     height: 100%;
     max-height: 1000px;
-    box-shadow: 1px 10px 10px darken($tom-yellow, 10%);
+    // box-shadow: 1px 10px 10px darken($tom-yellow, 10%);
+
+    @media (min-width: 700px) {
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+    }
 }
 #tomweer {
     top: 0;
-    position: fixed;
+    position: absolute;
     overflow: hidden;
-    // z-index: 1;
+    border-radius: 8px;
 }
 .errorpage {
     position: absolute;
