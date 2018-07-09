@@ -1,0 +1,3 @@
+function error() {
+    errorpage.show();
+}

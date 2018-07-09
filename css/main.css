@@ -1,0 +1,257 @@
+/*********************************************
+ * weatherdescription
+ *********************************************/
+.weeromschrijving {
+  position: absolute;
+  color: aqua;
+  z-index: 99;
+  width: 100%;
+  font-family: 'tomfont';
+  color: white;
+  margin-top: 70px; }
+  .weeromschrijving .omschrijving {
+    font-size: 18px; }
+  .weeromschrijving .temperatuur {
+    font-size: 36px;
+    line-height: 32px; }
+  @media (min-width: 360px) {
+    .weeromschrijving {
+      margin-top: 80px; } }
+  @media (min-width: 480px) {
+    .weeromschrijving {
+      text-align: center;
+      margin: 88px auto; }
+      .weeromschrijving p {
+        display: inline-block;
+        margin: 0; }
+      .weeromschrijving .omschrijving {
+        font-size: 30px;
+        margin-right: 28px; }
+        .weeromschrijving .omschrijving:after {
+          content: '';
+          position: absolute;
+          background: #72b6b7;
+          width: 6px;
+          height: 6px;
+          border-radius: 12px;
+          margin: 16px 8px 0 16px; }
+      .weeromschrijving .temperatuur {
+        font-size: 30px; } }
+
+/*********************************************
+ * searchform
+ *********************************************/
+.searchform {
+  overflow: hidden;
+  position: absolute;
+  z-index: 999999;
+  width: 100%; }
+  .searchform .zoekform {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    padding: 0 20px; }
+    .searchform .zoekform .clearbutton {
+      -webkit-appearance: none;
+      width: 32px;
+      height: 32px;
+      position: relative;
+      position: absolute;
+      margin: auto;
+      display: inline;
+      background-color: lightgrey;
+      background-image: url(../images/closebutton.svg);
+      background-size: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 16px;
+      border: none;
+      margin: 8px;
+      top: 0;
+      right: 22px;
+      z-index: 99999; }
+      .searchform .zoekform .clearbutton:hover {
+        background-color: #bbb; }
+      .searchform .zoekform .clearbutton:focus {
+        outline: none; }
+      .searchform .zoekform .clearbutton__hide {
+        display: none; }
+      .searchform .zoekform .clearbutton__show {
+        display: inline; }
+      .searchform .zoekform .clearbutton__svg {
+        width: 12px;
+        margin-top: 1px; }
+      @media (min-width: 480px) {
+        .searchform .zoekform .clearbutton {
+          top: auto;
+          right: auto;
+          margin-left: -42px;
+          z-index: 99999; } }
+    @media (min-width: 360px) {
+      .searchform .zoekform {
+        margin-top: 30px; } }
+  .searchform #formCity {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    height: 48px;
+    padding-left: 20px;
+    font-size: 18px;
+    line-height: 16px;
+    border: 1px solid #fff;
+    border-radius: 24px;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)); }
+    .searchform #formCity:focus {
+      outline: none; }
+    @media (min-width: 480px) {
+      .searchform #formCity {
+        max-width: 355px; } }
+
+/*********************************************
+ * searchpage
+ *********************************************/
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 100%; } }
+@keyframes slide {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 100%; } }
+
+@-webkit-keyframes reverseslide {
+  0% {
+    opacity: 100%; }
+  100% {
+    opacity: 0; } }
+
+@keyframes reverseslide {
+  0% {
+    opacity: 100%; }
+  100% {
+    opacity: 0; } }
+
+.searchpage, .searchpage__background {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  color: aqua;
+  width: 100%;
+  height: 100%;
+  background-color: #1a2326; }
+  .searchpage__transout, .searchpage__background__transout {
+    display: block;
+    -webkit-animation: reverseslide 200ms ease-in-out 550ms;
+            animation: reverseslide 200ms ease-in-out 550ms;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
+  .searchpage__show, .searchpage__background__show {
+    z-index: 999;
+    display: block;
+    -webkit-animation: slide 200ms ease-in-out alternate;
+            animation: slide 200ms ease-in-out alternate;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
+  .searchpage .submitbutton, .searchpage__background .submitbutton {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 96px;
+    width: 96px;
+    border-radius: 50%;
+    padding: 24px 16px;
+    margin: auto;
+    margin-top: 120px;
+    text-transform: uppercase;
+    -webkit-transform: rotate(-6deg);
+            transform: rotate(-6deg);
+    color: white;
+    font-size: 40px;
+    font-family: 'tomfont';
+    background-color: #eaa700;
+    text-align: center; }
+    .searchpage .submitbutton:hover, .searchpage__background .submitbutton:hover {
+      background-color: #d19500; }
+    .searchpage .submitbutton:active, .searchpage__background .submitbutton:active {
+      background-color: #d19500; }
+
+.searchpage__background__show {
+  z-index: -1; }
+
+/*********************************************
+ * Tom de weerbeer scss
+ *********************************************/
+@font-face {
+  font-family: "tomfont";
+  src: url("../fonts/Cof.ttf") format("opentype"); }
+
+body {
+  background: #eaa700;
+  margin: 0;
+  font-family: monospace;
+  font-size: 18px; }
+
+p {
+  margin: 6px 24px; }
+
+.weervoorspeller {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: 100%;
+  max-height: 1000px;
+  -webkit-box-shadow: 1px 10px 10px #b78300;
+          box-shadow: 1px 10px 10px #b78300; }
+
+#tomweer {
+  top: 0;
+  position: fixed;
+  overflow: hidden; }
+
+.errorpage {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: #1a2326;
+  z-index: 9999999;
+  font-family: 'tomfont';
+  font-size: 24px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+  .errorpage__inner {
+    padding: 36px;
+    text-align: center;
+    margin: auto;
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg); }
+    .errorpage__inner button {
+      font-family: 'tomfont';
+      font-size: 16px;
+      margin: 24px 0;
+      width: 80%;
+      max-width: 360px;
+      height: 44px;
+      border-radius: 24px;
+      border: none;
+      background-color: #eaa700;
+      -webkit-transform: rotate(-4deg);
+              transform: rotate(-4deg); }
+      .errorpage__inner button:focus {
+        outline: none; }
